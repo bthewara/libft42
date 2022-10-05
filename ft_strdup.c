@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bthewara <bthewara@student.42.fr>          +#+  +:+       +#+        */
+/*   By: bthewara <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/09 15:27:51 by bthewara          #+#    #+#             */
-/*   Updated: 2022/09/09 15:30:28 by bthewara         ###   ########.fr       */
+/*   Created: 2022/05/27 21:53:18 by bthewara          #+#    #+#             */
+/*   Updated: 2022/05/27 21:56:26 by bthewara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strdup(const char *s1)
 		return (NULL);
 	while (s1[i])
 	{
-		s2[i] = s[i];
+		s2[i] = s1[i];
 		i++;
 	}
 	s2[i] = '\0';

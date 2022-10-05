@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bthewara <bthewara@student.42.fr>          +#+  +:+       +#+        */
+/*   By: bthewara <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/09 13:51:59 by bthewara          #+#    #+#             */
-/*   Updated: 2022/09/09 13:55:39 by bthewara         ###   ########.fr       */
+/*   Created: 2022/02/16 23:35:15 by bthewara          #+#    #+#             */
+/*   Updated: 2022/05/27 22:07:29 by bthewara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memset(void *b, int c, size_t len)
 {
-	size_t	i;
+	size_t		i;
 
 	if (!b)
 		return (NULL);

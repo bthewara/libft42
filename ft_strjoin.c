@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bthewara <bthewara@student.42.fr>          +#+  +:+       +#+        */
+/*   By: bthewara <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/14 23:47:33 by bthewara          #+#    #+#             */
-/*   Updated: 2022/09/14 23:51:38 by bthewara         ###   ########.fr       */
+/*   Created: 2022/05/30 17:42:18 by bthewara          #+#    #+#             */
+/*   Updated: 2022/06/17 10:32:53 by bthewara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	{
 		while (s1[i])
 		{
-			s[j++] = ss1[i++];
+			s[j++] = s1[i++];
 		}
 	}
 	i = 0;

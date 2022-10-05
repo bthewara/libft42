@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bthewara <bthewara@student.42.fr>          +#+  +:+       +#+        */
+/*   By: bthewara <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/14 23:56:13 by bthewara          #+#    #+#             */
-/*   Updated: 2022/09/15 00:06:17 by bthewara         ###   ########.fr       */
+/*   Created: 2022/05/30 18:00:32 by bthewara          #+#    #+#             */
+/*   Updated: 2022/06/13 12:25:31 by bthewara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static int	is_in(char c, char const *set)
 		return (is_in(c, ++set));
 }
 
-static int	marker(const char *s, const char *set, int bagin)
+static int	marker(const char *s, const char *set, int begin)
 {
 	int		i;
 	int		iter;
@@ -59,6 +59,9 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (NULL);
 	b = marker(s1, set, 1);
 	e = marker(s1, set, 0) + 1;
+	if (b > e)
+		b = e;
+	s2 = (char *)malloc((e - b + 1) * sizeof(char));
 	if (!s2)
 		return (NULL);
 	ft_strlcpy(s2, &s1[b], e - b + 1);

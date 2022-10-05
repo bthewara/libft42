@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bthewara <bthewara@student.42.fr>          +#+  +:+       +#+        */
+/*   By: bthewara <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/15 00:09:50 by bthewara          #+#    #+#             */
-/*   Updated: 2022/09/15 00:33:19 by bthewara         ###   ########.fr       */
+/*   Created: 2022/05/30 22:39:06 by bthewara          #+#    #+#             */
+/*   Updated: 2022/06/13 12:33:06 by bthewara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static void	ft_free(char **array, int i)
 {
-	while (i > i)
+	while (i > -1)
 	{
 		free(array[i]);
 		i--;
@@ -77,7 +77,7 @@ static int	wordcount(const char *s, char c)
 			str++;
 		if (*str == c)
 		{
-			str = bbypass(str, c);
+			str = bypass(str, c);
 			wc++;
 		}
 		else if (*str == '\0')
@@ -94,7 +94,7 @@ char	**ft_split(char const *s, char c)
 	if (!s)
 		return (NULL);
 	if (*s == '\0')
-		wc = 1;
+		wc = 0;
 	else if (c == '\0')
 		wc = 1;
 	else

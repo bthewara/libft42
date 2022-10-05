@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bthewara <bthewara@student.42.fr>          +#+  +:+       +#+        */
+/*   By: bthewara <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/15 01:09:05 by bthewara          #+#    #+#             */
-/*   Updated: 2022/09/15 01:14:46 by bthewara         ###   ########.fr       */
+/*   Created: 2022/06/11 00:24:49 by bthewara          #+#    #+#             */
+/*   Updated: 2022/06/13 13:10:42 by bthewara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void	ft_putnbr_fd(int n, int fd)
 		if (n < 0)
 		{
 			ft_putchar_fd('-', fd);
-			if (n == -214783648)
+			if (n == -2147483648)
 			{
 				n = (-1) * (n / 10);
 				cut(n, fd);
@@ -43,7 +43,7 @@ void	ft_putnbr_fd(int n, int fd)
 			{
 				n = -n;
 				cut(n, fd);
-			}
+			}		
 		}
 		else
 			cut(n, fd);

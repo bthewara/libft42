@@ -1,23 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bthewara <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/16 23:23:10 by bthewara          #+#    #+#             */
-/*   Updated: 2022/06/13 11:35:29 by bthewara         ###   ########.fr       */
+/*   Created: 2022/06/13 01:58:11 by bthewara          #+#    #+#             */
+/*   Updated: 2022/06/13 13:11:18 by bthewara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const	char *s)
+t_list	*ft_lstlast(t_list *lst)
 {
-	size_t	i;
+	t_list	*last;
 
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
+	last = lst;
+	if (lst)
+	{
+		while (last->next)
+			last = last->next;
+	}
+	return (last);
 }

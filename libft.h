@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bthewara <bthewara@student.42.fr>          +#+  +:+       +#+        */
+/*   By: bthewara <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/03 18:27:46 by bthewara          #+#    #+#             */
-/*   Updated: 2022/10/03 18:30:32 by bthewara         ###   ########.fr       */
+/*   Created: 2022/02/16 00:56:21 by bthewara          #+#    #+#             */
+/*   Updated: 2022/06/15 15:54:40 by bthewara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,17 +20,17 @@ typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
-}				t_list;
+}					t_list;
 
 typedef struct s_split_next
 {
 	size_t	start;
 	size_t	length;
-}				t_split_next;
+}					t_split_next;
 
 int				ft_atoi(const char *str);
 
-void			ft_bzero(void *s, size_t n);
+void			ft_bzero(void	*s, size_t n);
 
 void			*ft_calloc(size_t count, size_t size);
 
@@ -72,6 +72,8 @@ char			*ft_strchr(const char *s, int c);
 
 char			*ft_strdup(const char *s1);
 
+void			ft_striteri(char *s, void (*f)(unsigned int, char *));
+
 char			*ft_strjoin(char const *s1, char const *s2);
 
 size_t			ft_strlcat(char *dst, const char *src, size_t size);
@@ -105,7 +107,7 @@ t_list			*ft_lstlast(t_list *lst);
 
 void			ft_lstadd_front(t_list **alst, t_list *new);
 
-void			ft_lstadd_back(t_list **alst, t_list *new);
+void			ft_lstadd_back(t_list **lst, t_list *new);
 
 void			ft_lstdelone(t_list *lst, void (*del)(void*));
 
